@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ru.ivannovr.dbinterface.ui.TableViewController" styleClass="vbox">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <HBox spacing="10.0" alignment="CENTER_LEFT" styleClass="hbox">
+        <Label text="Select Table:" styleClass="header"/>
+        <ComboBox fx:id="tableComboBox" prefWidth="200.0"/>
+        <TextField fx:id="searchField" promptText="Search..." prefWidth="200.0"/>
+    </HBox>
+
+    <TableView fx:id="dataTable" minWidth="600.0" styleClass="table-view"/>
+
+    <HBox spacing="10.0" alignment="CENTER" styleClass="hbox">
+        <Button fx:id="addButton" text="Add Record" styleClass="button,primary"/>
+        <Button fx:id="editButton" text="Edit Record" styleClass="button,primary"/>
+        <Button fx:id="deleteButton" text="Delete Record" styleClass="button,primary"/>
+        <Button fx:id="exportButton" text="Export to CSV" styleClass="button,primary"/>
+        <Button fx:id="logoutButton" text="Logout" styleClass="button,danger"/>
+    </HBox>
+</VBox>
